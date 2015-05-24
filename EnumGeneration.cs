@@ -55,7 +55,7 @@ namespace CodeGeneration
                         var ds = db.ExecuteWithResults(string.Format("select {0} from {1}", foundStaticColumn, table.Name));
                         var rdr = ds.CreateDataReader();
 
-                        csharp.AppendLine("public Enum " + cleanName(table.Name));
+                        csharp.AppendLine("public enum " + cleanName(table.Name));
                         csharp.AppendLine("{");
 
                         enumProp = "";
